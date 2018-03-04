@@ -110,7 +110,7 @@ const ProjectMeta = styled.p`
 function Project(props) {
   let url = `${GITHUB_API_PREFIX}${props.project.repo}`;
   return (
-    <Async cached={maybeGetCached(url)} fetch={() => fetchAndCacheJson(url)}>
+    <Async cached={maybeGetCached(url)} fetch={() => fetchAndCacheJson(url)} refetch>
       {state => (
         <ProjectLink
           // highlight
