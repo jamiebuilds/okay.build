@@ -221,7 +221,7 @@ function getCached(): Data | null {
 
 function Board() {
   return (
-    <Async refetch fetch={fetchData} cached={getCached()}>
+    <Async refetch fetch={fetchData} cached={getCached()} refetch>
       {state => {
         if (state.data) {
           return (
